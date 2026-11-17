@@ -1,1 +1,40 @@
-{% extends 'base.html' %}{% block title %}Visit saved · Kiran Saloon{% endblock %}{% block content %}<section class="page-wrap confirm-wrap"><div class="confirm-mark">✓</div><div class="eyebrow">IT'S ON THE BOARD</div><h1>See you <em>soon, {{ booking.name }}.</em></h1><p class="muted">Your appointment request has been saved. Here's what we've got:</p><div class="panel confirm-card"><div><small>SERVICE</small><strong>{{ booking.service }}</strong></div><div><small>DATE & TIME</small><strong>{{ booking.booking_date }} · {{ booking.booking_time }}</strong></div><div><small>EST. TIME</small><strong>About {{ booking.duration }} minutes</strong></div><div><small>PRICE</small><strong>{% if booking.price is not none %}₹{{ '%.0f'|format(booking.price) }}{% else %}Please ask in store{% endif %}</strong></div><div class="booking-ref">Booking #{{ booking.id }} · Keep this page for your details.</div></div><a class="button" href="{{ url_for('home') }}">Back to the salon <span>↗</span></a></section>{% endblock %}
+﻿{% extends 'base.html' %}
+{% block title %}
+Visit saved Â· Kiran Saloon
+{% endblock %}
+{% block content %}
+<section class="page-wrap confirm-wrap">
+<div class="confirm-mark">âœ“</div>
+<div class="eyebrow">IT'S ON THE BOARD</div>
+<h1>See you <em>soon, {{ booking.name }}.</em>
+</h1>
+<p class="muted">Your appointment request has been saved. Here's what we've got:</p>
+<div class="panel confirm-card">
+<div>
+<small>SERVICE</small>
+<strong>{{ booking.service }}</strong>
+</div>
+<div>
+<small>DATE & TIME</small>
+<strong>{{ booking.booking_date }} Â· {{ booking.booking_time }}</strong>
+</div>
+<div>
+<small>EST. TIME</small>
+<strong>About {{ booking.duration }} minutes</strong>
+</div>
+<div>
+<small>PRICE</small>
+<strong>
+{% if booking.price is not none %}
+â‚¹{{ '%.0f'|format(booking.price) }}
+{% else %}
+Please ask in store
+{% endif %}
+</strong>
+</div>
+<div class="booking-ref">Booking #{{ booking.id }} Â· Keep this page for your details.</div>
+</div>
+<a class="button" href="{{ url_for('home') }}">Back to the salon <span>â†—</span>
+</a>
+</section>
+{% endblock %}

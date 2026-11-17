@@ -1,1 +1,59 @@
-{% extends 'base.html' %}{% block title %}Book a visit · Kiran Saloon{% endblock %}{% block content %}<section class="page-wrap"><a class="back-link" href="{{ url_for('home') }}">← Back to the salon</a><div class="form-layout"><div><div class="eyebrow">YOUR NEXT GOOD HAIR DAY</div><h1>Save your<br><em>seat.</em></h1><p class="muted">Tell us what you're after and when you'd like to come in. Your booking is saved on the salon's appointment board.</p><div class="form-aside"><span>✳</span><p>Plans change? Give the salon a call to update your visit.</p></div></div><form class="panel booking-form" method="post"><h2>Book a visit</h2><label>Your name<input name="name" maxlength="80" required autocomplete="name" placeholder="e.g. Arjun Kumar"></label><label>Phone number<input name="phone" maxlength="30" required autocomplete="tel" inputmode="tel" placeholder="Your contact number"></label><label>Choose a service<select name="service_id" required><option value="">Select a service</option>{% for s in services %}<option value="{{ s.id }}" {% if selected|string == s.id|string %}selected{% endif %}>{{ s.name }} · {{ s.duration }} min · {% if s.price is not none %}₹{{ '%.0f'|format(s.price) }}{% else %}price in store{% endif %}</option>{% endfor %}</select></label><div class="form-row"><label>Date<input type="date" name="booking_date" min="{{ min_date }}" required></label><label>Time<input type="time" name="booking_time" required></label></div><label>Anything we should know? <small>(optional)</small><textarea name="notes" maxlength="300" rows="3" placeholder="A quick note for Kiran"></textarea></label><button class="button form-submit" type="submit">Request appointment <span>↗</span></button><small class="form-help">Appointments are subject to availability. We'll see you soon!</small></form></div></section>{% endblock %}
+﻿{% extends 'base.html' %}
+{% block title %}
+Book a visit Â· Kiran Saloon
+{% endblock %}
+{% block content %}
+<section class="page-wrap">
+<a class="back-link" href="{{ url_for('home') }}">â† Back to the salon</a>
+<div class="form-layout">
+<div>
+<div class="eyebrow">YOUR NEXT GOOD HAIR DAY</div>
+<h1>Save your<br>
+<em>seat.</em>
+</h1>
+<p class="muted">Tell us what you're after and when you'd like to come in. Your booking is saved on the salon's appointment board.</p>
+<div class="form-aside">
+<span>âœ³</span>
+<p>Plans change? Give the salon a call to update your visit.</p>
+</div>
+</div>
+<form class="panel booking-form" method="post">
+<h2>Book a visit</h2>
+<label>Your name<input name="name" maxlength="80" required autocomplete="name" placeholder="e.g. Arjun Kumar">
+</label>
+<label>Phone number<input name="phone" maxlength="30" required autocomplete="tel" inputmode="tel" placeholder="Your contact number">
+</label>
+<label>Choose a service<select name="service_id" required>
+<option value="">Select a service</option>
+{% for s in services %}
+<option value="{{ s.id }}"
+{% if selected|string == s.id|string %}
+selected
+{% endif %}
+>{{ s.name }} Â· {{ s.duration }} min Â·
+{% if s.price is not none %}
+â‚¹{{ '%.0f'|format(s.price) }}
+{% else %}
+price in store
+{% endif %}
+</option>
+{% endfor %}
+</select>
+</label>
+<div class="form-row">
+<label>Date<input type="date" name="booking_date" min="{{ min_date }}" required>
+</label>
+<label>Time<input type="time" name="booking_time" required>
+</label>
+</div>
+<label>Anything we should know? <small>(optional)</small>
+<textarea name="notes" maxlength="300" rows="3" placeholder="A quick note for Kiran">
+</textarea>
+</label>
+<button class="button form-submit" type="submit">Request appointment <span>â†—</span>
+</button>
+<small class="form-help">Appointments are subject to availability. We'll see you soon!</small>
+</form>
+</div>
+</section>
+{% endblock %}
