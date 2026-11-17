@@ -1,0 +1,2 @@
+booking_id,customer_name,service_type,booking_date,slot_start,slot_end,barber_id,status
+BKAE399324,shyam,Haircut + Beard,2026-11-17,18:30,19:00,B3,confirmed

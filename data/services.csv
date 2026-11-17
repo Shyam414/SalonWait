@@ -1,0 +1,5 @@
+service_id,service_name,price,duration_minutes,active
+1,Haircut,150,20,true
+2,Beard Trim,80,10,true
+3,Haircut + Beard,200,30,true
+4,Head Massage,100,20,true
