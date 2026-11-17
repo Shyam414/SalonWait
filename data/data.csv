@@ -1,0 +1,26 @@
+record_id,observation_date,arrival_time,service_type,service_start_time,service_end_time,barber_id,service_status
+S001,2026-11-17,09:00,Haircut,09:03,09:23,B1,completed
+S002,2026-11-17,09:04,Beard Trim,09:06,09:18,B2,completed
+S003,2026-11-17,09:07,Haircut + Beard,09:10,09:40,B3,completed
+S004,2026-11-17,09:12,Haircut,09:23,09:43,B1,completed
+S005,2026-11-17,09:18,Head Massage,09:20,09:40,B2,completed
+S006,2026-11-17,09:25,Haircut,09:40,10:00,B3,completed
+S007,2026-11-17,09:31,Beard Trim,09:43,09:55,B2,completed
+S008,2026-11-17,09:38,Haircut,09:43,10:03,B1,completed
+S009,2026-11-17,09:45,Haircut + Beard,10:00,10:30,B3,completed
+S010,2026-11-17,09:50,Haircut,09:55,10:15,B2,completed
+S011,2026-11-17,09:56,Haircut,10:03,10:23,B1,completed
+S012,2026-11-17,10:02,Beard Trim,10:15,10:27,B2,completed
+S013,2026-11-17,10:08,Haircut,10:30,10:50,B3,completed
+S014,2026-11-17,10:14,Haircut,10:23,10:43,B1,completed
+S015,2026-11-17,10:20,Head Massage,10:27,10:47,B2,completed
+S016,2026-11-17,10:26,Beard Trim,10:43,10:55,B1,completed
+S017,2026-11-17,10:31,Beard Trim,10:47,10:59,B2,completed
+S018,2026-11-17,10:36,Beard Trim,10:50,11:00,B3,completed
+S019,2026-11-17,10:40,Beard Trim,10:55,11:00,B1,completed
+S020,2026-11-17,10:44,Beard Trim,10:47,11:00,B2,completed
+S021,2026-11-17,10:48,Beard Trim,10:50,11:00,B3,completed
+S022,2026-11-17,10:51,Beard Trim,10:55,11:00,B1,completed
+S023,2026-11-17,10:54,Beard Trim,10:59,11:00,B2,completed
+S024,2026-11-17,10:57,Beard Trim,10:58,11:00,B3,completed
+S025,2026-11-17,10:59,Beard Trim,10:59,11:00,B1,completed
